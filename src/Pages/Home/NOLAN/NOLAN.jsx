@@ -8,7 +8,7 @@ const NOLAN = () => {
         width: '500',
         playerVars: {
             // Add any YouTube player parameters here (optional)
-            autoplay: 1, // Autoplay the video when the component mounts
+            // autoplay: 1, // Autoplay the video when the component mounts
         },
     };
 
