@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import React, { useContext, useState } from 'react';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import "./Header.css"
 import { Link } from 'react-router-dom';
 import icon from "../../assets/favicon-32x32.png"
 import CreateScript from '../CreateScript/CreateScript';
+import { AuthContext } from '../../providers/AuthProvider';
+import { FaSignInAlt, FaUserCircle } from 'react-icons/fa';
 
 const Header = () => {
-
+    //script Modal
     const [showModal, setShowModal] = useState(false);
 
     const handleModalClose = () => {
@@ -16,6 +18,13 @@ const Header = () => {
     const handleModalOpen = () => {
         setShowModal(true);
     };
+    // Logout
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error));
+    }
     return (
         <div >
             <Navbar fixed="top" data-bs-theme="dark" className='custom-header '>
@@ -29,11 +38,18 @@ const Header = () => {
                     <div className='justify-content-end'>
                         <Nav className="me-auto text-white ">
                             <Link className='text-decoration-none text-light me-4 mt-2'>About us</Link>
-                            <Link to="/login" className='text-decoration-none text-light me-4 mt-2'>Login</Link>
                             <Link className='text-decoration-none text-light me-4 mt-2'>Pricing</Link>
                             <Link className='text-decoration-none text-light me-4 mt-2 ' onClick={handleModalOpen}>Create Script</Link>
-                            <Link className='text-decoration-none text-light me-1 mt-2 '>Blog</Link>
+                            <Link className='text-decoration-none text-light me-4 mt-2 '>Blog</Link>
+                            {user ?
+                                <Link onClick={handleLogOut} className='text-decoration-none text-light me-4 mt-2'>Logout</Link> :
+                                <Link to="/login" className='text-decoration-none text-light me-4 mt-2'>
+                                    Login
+                                </Link>
+                            }
 
+                            {user && <p className='text-white pt-2 me-3 ' data-toggle="tooltip" data-placement="right" title={user?.displayName}> <img src={user?.photoURL
+                            } alt="" srcset="" style={{ height: '40px', borderRadius: '50%', width: '40px' }} /> </p>}
                         </Nav>
                     </div>
                 </Container>
