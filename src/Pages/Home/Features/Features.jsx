@@ -7,8 +7,8 @@ import accent from "../../../assets/accent.webp";
 import script1 from "../../../assets/script_smart.webp";
 const Features = () => {
     return (
-        <div className='my-5' style={{ backgroundColor: "rgba(44, 42, 42, 0.397)" }}>
-            <h3 className='text-center my-5' >Features</h3>
+        <div className=' py-5' style={{ backgroundColor: "rgba(44, 42, 42, 0.397)" }}>
+            <h3 className='text-center my-5 ' >Features</h3>
             <Row xs={1} md={2} className="g-3 mx-5 mb-5">
                 <Col>
                     <img src={intro} alt="" style={{ height: "300px", width: "80%" }} />

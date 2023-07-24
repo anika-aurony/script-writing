@@ -1,0 +1,18 @@
+.login-bg{
+    background-image:linear-gradient(rgba(213, 96, 96, 0.292), rgba(29, 35, 33, 0.16)), url("https://res.cloudinary.com/dihxkysmc/image/upload/v1690033958/script%20writing/login_hero_rf5vy2.webp");
+    background-size: cover ;
+}
+.back{
+    background-color: rgba(44, 42, 42, 0.699);
+    border: 0px solid;
+    border-radius: 10px;
+    width : 50%;
+    height: 100%;
+    margin: 20px auto;
+    padding: 40px 0;
+}
+
+.back button{
+    width: 40%;
+    margin: 10px auto;
+}
