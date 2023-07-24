@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import {  Container, Nav, Navbar } from 'react-bootstrap';
 import "./Header.css"
 import { Link } from 'react-router-dom';
 import icon from "../../assets/favicon-32x32.png"
 import CreateScript from '../CreateScript/CreateScript';
 import { AuthContext } from '../../providers/AuthProvider';
-import { FaSignInAlt, FaUserCircle } from 'react-icons/fa';
+
 
 const Header = () => {
     //script Modal
@@ -32,7 +32,7 @@ const Header = () => {
                 <Container >
 
                     <Link className='text-decoration-none text-light' to='/'>
-                        <img src={icon} alt="" srcset="" className='d-block ms-1' style={{ height: "27px", width: "70%" }} />
+                        <img src={icon} alt=""  className='d-block ms-1' style={{ height: "27px", width: "70%" }} />
                         NOLAN
                     </Link>
                     <div className='justify-content-end'>
@@ -49,7 +49,7 @@ const Header = () => {
                             }
 
                             {user && <p className='text-white pt-2 me-3 ' data-toggle="tooltip" data-placement="right" title={user?.displayName}> <img src={user?.photoURL
-                            } alt="" srcset="" style={{ height: '40px', borderRadius: '50%', width: '40px' }} /> </p>}
+                            } alt="" style={{ height: '40px', borderRadius: '50%', width: '40px' }} /> </p>}
                         </Nav>
                     </div>
                 </Container>
