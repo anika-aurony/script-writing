@@ -1,0 +1,9 @@
+.bg{
+
+    background-image:linear-gradient(rgba(213, 96, 96, 0.292), rgba(29, 35, 33, 0.16)), url("https://res.cloudinary.com/dihxkysmc/image/upload/v1690033815/script%20writing/hero_1_jvdnjs.webp");
+    background-size: cover ;
+   
+}
+.logo img{
+    width: 38%;
+}
