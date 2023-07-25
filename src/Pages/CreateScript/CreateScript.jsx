@@ -23,7 +23,7 @@ const CreateScript = ({ show, handleClose }) => {
 
         {
             user ?
-                fetch('http://localhost:5000/script', {
+                fetch('https://script-writing-server.vercel.app/script', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

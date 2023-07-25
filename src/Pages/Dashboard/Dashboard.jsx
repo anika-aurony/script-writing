@@ -22,7 +22,7 @@ const Dashboard = () => {
     };
 
     useEffect(() => {
-        fetch('http://localhost:5000/scripts')
+        fetch('https://script-writing-server.vercel.app/scripts')
             .then(res => res.json())
             .then(data => setAllNotes(data))
     }, [showModal])
@@ -36,7 +36,7 @@ const Dashboard = () => {
             denyButtonText: `Don't Delete`,
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/script/${id}`, {
+                fetch(`https://script-writing-server.vercel.app/script/${id}`, {
                     method: 'Delete'
                 })
                     .then(res => res.json())
