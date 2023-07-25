@@ -1,0 +1,14 @@
+.dash-bg{
+    background-image:linear-gradient(rgba(213, 96, 96, 0.292), rgba(29, 35, 33, 0.16)), url("https://img.freepik.com/free-photo/business-women-signature-document_1388-90.jpg?w=826&t=st=1690284345~exp=1690284945~hmac=a0a5e43fb84e449c27bcaec6c0ef18f1de7f2b7b7fb399d1d9fa4ca1c5896f2f");
+    background-size: cover ;
+}
+
+.dash-back{
+    background-color: rgba(44, 42, 42, 0.699);
+    border: 0px solid;
+    border-radius: 10px;
+    width : 50%;
+    height: 100%;
+    margin: 20px auto;
+    padding: 40px 0;
+}

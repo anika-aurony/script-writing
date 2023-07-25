@@ -1,13 +1,16 @@
 import React, { useContext, useState } from 'react';
 import "./Register.css"
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('')
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/dashboard'
 
     const handleRegister = event => {
         setError('')
@@ -26,6 +29,7 @@ const Register = () => {
                 const createdUser = result.user;
                 console.log(createdUser);
                 updateUserData(result.user, name, photo);
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);

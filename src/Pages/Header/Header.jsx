@@ -37,6 +37,9 @@ const Header = () => {
                     </Link>
                     <div className='justify-content-end'>
                         <Nav className="me-auto text-white ">
+                            {
+                                user && <Link to="/dashboard"  className='text-decoration-none text-light me-4 mt-2'>Dashboard</Link>
+                            }
                             <Link className='text-decoration-none text-light me-4 mt-2'>About us</Link>
                             <Link className='text-decoration-none text-light me-4 mt-2'>Pricing</Link>
                             <Link className='text-decoration-none text-light me-4 mt-2 ' onClick={handleModalOpen}>Create Script</Link>

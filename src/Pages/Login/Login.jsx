@@ -8,7 +8,7 @@ const Login = () => {
     const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/'
+    const from = location.state?.from?.pathname || '/dashboard'
     const [error, setError] = useState('')
 
     const handleLogin = event =>{
