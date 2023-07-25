@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
-
+import "./Register.css"
 const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('')
